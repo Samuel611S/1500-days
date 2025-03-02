@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1500 Magical Days With My Sunshine 🌸</title>
     <style>
-        
         body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd);
-            font-family: 'Pacifico', cursive;
-            overflow-x: hidden;
-        }
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%; /* Allows the gradient to move */
+    animation: gradientWave 15s ease infinite; /* Wave-like animation */
+    font-family: 'Pacifico', cursive;
+    overflow-x: hidden;
+    }
 
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 10px;
-        }
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 10px;
+}
 
         .header {
             text-align: center;
@@ -55,26 +71,22 @@
         .memory-box {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    text-align: center; /* Center text */
-    min-height: 50vh; /* Adjust this to control the height of the centered section */
+    width: auto; /* Adjusts to content */
+    max-width: 90%; /* Prevents overflow on small screens */
 }
 
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-flow: dense; /* Allows photos to fill gaps */
+    grid-auto-flow: dense;
     gap: 10px;
     padding: 10px;
     width: 100%;
-    max-width: 800px; /* Optional: Limit the maximum width */
+    max-width: 800px; /* Optional: Limit maximum width */
+    margin: 0 auto; /* Center the grid */
 }
 
         .photo-item {
@@ -82,12 +94,14 @@
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s;
+            aspect-ratio: 1; /* Ensures square containers */
         }
 
-        .photo-item img {
+        .photo-item img,
+        .photo-item video {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover; /* Ensures images/videos fill the container */
             border-radius: 10px;
         }
 
@@ -179,10 +193,10 @@
             <div class="photo-grid">
                 <!-- Add your photos here -->
                 <div class="photo-item">
-                    <img src="photo9.jpg" alt="Our Memory">
+                    <img src="photo1.jpg" alt="Our Memory">
                 </div>
                 <div class="photo-item">
-                    <img src="photo9.jpg" alt="Our Memory">
+                    <img src="photo2.jpg" alt="Our Memory">
                 </div>
                 <div class="photo-item">
                     <img src="photo3.jpg" alt="Our Memory">
@@ -199,18 +213,49 @@
                 <div class="photo-item">
                     <img src="photo7.jpg" alt="Our Memory">
                 </div>
+                <!-- Video instead of picture 8 -->
+                <div class="photo-item">
+                    <video controls autoplay muted loop width="100%">
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="photo-item">
+                    <img src="photo9.jpg" alt="Our Memory">
+                </div>
                 <div class="photo-item">
                     <img src="photo8.jpg" alt="Our Memory">
                 </div>
                 <div class="photo-item">
-                    <img src="photo9.jpg" alt="Our Memory">
+                    <img src="photo11.jpg" alt="Our Memory">
                 </div>
                 <div class="photo-item">
-                    <img src="photo9.jpg" alt="Our Memory">
+                    <img src="photo12.jpg" alt="Our Memory">
                 </div>
-                
-                
-                <!-- Add more photos -->
+                <div class="photo-item">
+                    <img src="photo13.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo14.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo15.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo16.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo17.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo18.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo19.jpg" alt="Our Memory">
+                </div>
+                <div class="photo-item">
+                    <img src="photo20.jpg" alt="Our Memory">
+                </div>
             </div>
         </div>
 
