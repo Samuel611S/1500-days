@@ -281,16 +281,28 @@
 
         // Love letter reveal
         function revealLetter() {
-            const letter = document.getElementById('letterText');
-            letter.innerHTML = `
-                My Dearest [Her Name],<br><br>
-                These 1500 days with you have been... 
-                [Your personal message here]
-                Forever Yours,<br>
-                [Your Name]
-            `;
-            letter.style.fontSize = '1.2em';
-        }
+        const letter = document.getElementById('letterText');
+        letter.innerHTML = `
+            <p>It’s been 1500 days since you became my mother, sister, best friend, and the most perfect girlfriend I could ever imagine. 🌝</p>
+            <p>No words can describe how much I appreciate your efforts to make my life better. Every time I feel stressed, just remembering that I have you in my life is enough to make any situation better. 🥰🥰🥰</p>
+            <p>Every time I go into your arms and start venting about how I feel messed up, just seeing you smile is enough for me.</p>
+            <p>I want to tell you that I will always appreciate everything you have done, are doing, and will do for me. 😘😘😘</p>
+            <p>Seeing you makes life colorful.</p>
+            <p>Hearing your voice is the best music and sound for my ears. 🫀🫀</p>
+            <p>I love sharing everything with you. 🦦❤❤</p>
+            <br>
+            <p>Rbna ykhliki lia yrohe wlahy msh aaref na aamlt eh f dnyty ashan rbna ydyny hdya zy dy.</p>
+            <p>Rbna l aaref na bhbk w bhareb l dnya kolha ashan nfdal maa baad azai.</p>
+            <p>Dool 1500 youm aado whna maa baad.</p>
+            <p>Lma naadi zyhom tani hnkoon mkhtobeen isa ❤❤</p>
+            <p>Bhbk yrohalbi ❤❤❤🌍</p>
+            <p>Rbna ykhlina lbaad 🥰💋💋</p>
+        `;
+        letter.style.fontSize = '1.2em';
+        letter.style.lineHeight = '1.6'; // Adjust line height for better readability
+        letter.style.textAlign = 'left'; // Align text to the left for a clean look
+        letter.style.padding = '20px'; // Add padding for better spacing
+    }
 
         // Initialize
         createHearts();
